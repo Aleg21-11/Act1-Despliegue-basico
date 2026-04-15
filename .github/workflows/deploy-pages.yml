@@ -31,7 +31,7 @@ jobs:
           cache-dependency-path: deploy-v1-pages/package-lock.json
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install --legacy-peer-deps
 
       - name: Build develop preview
         if: github.ref == 'refs/heads/develop' || github.base_ref == 'develop'
